@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Dhurjati' rel='stylesheet'>
+    <title>Christmas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media screen and ( min-height: 1060px ) {
+            
+            header nav{
+                height: 15%;
+            }
+            .background{
+                margin-top: 0;
+                background-size: 100%;
+                background-position: 50% 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @media screen and ( min-height: 1015px ) {
+            .background{
+                margin-top: 0;
+                background-size: 100%;
+                background-position: 50% 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            header nav{
+                height: 8%;
+            }
+        }
+        @media screen and (max-width: 1050px) {
+            
+        }
+            .background{
+                height: 100%;
+                width: 100%;
+                background-image: url(img/parallax\ top\ bg.jpg);
+                background-size: 10px;
+                background-position: 50% 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+        .background h1{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+            width: 100%;
+            font-size: 4.5vw;
+            color: white;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            background: url('img/back-text.png'); 
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: backText 20s linear infinite alternate;
+        }
+        .background h4{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            position: relative;
+            font-size: 3vw;
+            width: 100%;
+            color: white;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            background: url('img/back-text.png'); 
+            -webkit-background-clip: text;
+            background-position: 0 0;
+            animation: backText 20s linear infinite alternate;
+            margin-left: 45%;
+        }
+        @keyframes backText {
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+        body{
+        overflow-x: hidden;
+        }
+        .background{
+            min-height: 92vh;
+            background-image: url(img/parallax\ top\ bg.jpg);
+            background-size: 100%;
+            background-position: 50% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }      
+        header nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            font-size: 20px;
+            padding: 20px 60px;
+            color: white;
+            position: absolute;
+            width: 92%;
+        }
+        header nav span{
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+        }
+        header nav span a{
+            color: white;
+            text-decoration:none;
+            position: relative;
+            font-weight: 500;
+        }
+        @keyframes beforeAnimation {
+            0%{
+                width: 0%;
+                transform: translateX(-50%);
+            }
+            100%{
+                width: 100%;
+                transform: translateX(0%);
+            }
+        }
+        header nav span a::before{
+            content: "";
+            background-color: white;
+            width: 100%;
+            height: 2.4px;
+            position: absolute;
+            bottom: -5px;
+            left: 0px;
+            display: none;
+            animation: beforeAnimation .5s;
+        }
+        header nav span a:hover::before{
+            display: unset;
+        }
+        .About{
+            background-color: #001747;
+            color: white;
+            padding: 40px 120px;
+            font-size: 16px;
+        }
+        .About h1{
+            padding:40px 0px;
+            font-size: 30px;
+        }
+        .About p{
+            padding: 18px 0px;
+        }
+        .snow, .snow2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(img/snow.png);
+            background-position: 0 0;
+        }
+        .snow{
+            background-size: 70em;
+            animation: snowfall 30s linear infinite;
+        }
+        .snow2{
+            background-size: 70em;
+            animation: snowfall 30s linear infinite; opacity: 0.5;
+        }
+        @keyframes snowfall {
+            100% {
+                background-position: 70em 70em;
+            }
+        }
+        @keyframes snowfall2 {
+            100% {
+                background-position: 50em 0;
+            }
+        }
+        .texts{
+            margin-bottom: 26%;
+        }
+ 
+    </style>
+</head>
+<body>
+    <header>
+        <div class="snow"></div>
+        <div class="snow2"></div>
+        <nav>
+            <h1>
+                Christmas SZN
+            </h1>
+            <span>
+                <a href="#">Home</a>
+                <a href="#santa">Who is santa?</a>
+                <a href="#">Donate Gifts Here</a>
+            </span>
+        </nav>
+    </header>
+    <div class="page1">
+    <section class="background" id="background">
+        <div class="texts">
+        <span><h1 id="H1">Merry Christmas</h1></span>
+        <span><h4 id="h4"> To you and to me</h4></span>
+    </div>
+    </div>
+   
+       
+    </section>
+    <div class="santac">
+   
+    <section class="About" id="santa">
+        <h1>Who is Santa Claus</h1>
+        <p> legendary figure who is the traditional patron of Christmas in the United States and other countries, bringing gifts to children.</p>
+        <p>Santa clau gives away gifts in the best time of the year but who does he give those gifts to?</p>
+        <p>to none other than the kids on his good list, if you've been naughty there will be no gifts for you.</p>
+    </section>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/1cad54f882.js" crossorigin="anonymous"></script>
+</body>
+</html>
